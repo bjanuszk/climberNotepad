@@ -26,6 +26,9 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
+
+	compile group: 'org.mapstruct', name: 'mapstruct-processor', version: '1.2.0.Final'
+
 	runtime('org.springframework.boot:spring-boot-devtools')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
