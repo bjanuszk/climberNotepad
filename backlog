@@ -1,0 +1,7 @@
+01. Create initial project structure
+02. Add route feature.
+    - TO, BO, Entity
+    - MapStruct -> alternative for Dozer
+    - Elasticsearch Spring support
+03. Get all routes feature
+04. Add integration tests.

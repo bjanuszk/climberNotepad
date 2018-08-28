@@ -1,0 +1,4 @@
+- Spring Dev Tools:
+    - uzywany do live reload
+- MapStruct:
+    - alternatywa dla Dozer'a
