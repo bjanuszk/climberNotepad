@@ -1,4 +1,4 @@
-package bj.climberNotepad;
+package bj.climbernotepad;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
