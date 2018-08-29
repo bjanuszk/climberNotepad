@@ -1,4 +1,6 @@
 - Spring Dev Tools:
     - uzywany do live reload
+- Sprig Boot Actuator
+    - narzedzie do monitoringu, dodaje kilkanascie endpointow do aplikacji (spring-boot-starter-actuator)
 - MapStruct:
     - alternatywa dla Dozer'a
