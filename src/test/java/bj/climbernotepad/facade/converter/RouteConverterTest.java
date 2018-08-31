@@ -11,13 +11,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class RouteConverterTest {
 
     @Test
-    public void shouldConvertRoute() {
-        String name = "Znikajacy punkt";
-        String level = "7a+/7b";
-        String region = "Sokoliki";
-        String crag = "Sukiennice";
-        LocalDate finished = LocalDate.now();
-        RouteDTO routeDTO = new RouteDTO(name, level, region, crag, finished);
+    public void shouldConvertRouteDTO() {
+        RouteDTO routeDTO = new RouteDTO("Znikajacy punkt", "7a+/7b", "Sokoliki", "Sukiennice", LocalDate.now());
 
         Route route = RouteConverter.INSTANCE.fromDto(routeDTO);
 
@@ -25,4 +20,13 @@ public class RouteConverterTest {
                 (routeDTO, "name", "level", "region", "crag", "finished");
     }
 
+    @Test
+    public void shouldConvertRoute() {
+        Route route = new Route("Znikajacy punkt", "7a+/7b", "Sokoliki", "Sukiennice", LocalDate.now());
+
+        RouteDTO routeDto = RouteConverter.INSTANCE.fromBO(route);
+
+        assertThat(routeDto).isEqualToComparingOnlyGivenFields
+                (route, "name", "level", "region", "crag", "finished");
+    }
 }
